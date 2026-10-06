@@ -50,7 +50,11 @@ PrintStmt::PrintStmt(Exp *e) { exp = e; }
 
 PrintStmt::~PrintStmt() {}
 
-IfStmt::IfStmt(Exp *c) { cond = c; }
+IfStmt::IfStmt(Exp *c, list<Stmt*> t, list<Stmt*> e) {
+    cond = c;
+    thenList = t;
+    elseList = e;
+}
 
 IfStmt::~IfStmt() { delete cond; }
 
@@ -100,3 +104,12 @@ ReturnStmt::~ReturnStmt() {
     delete exp;
 }
 
+// Falta esto en ast.cpp:
+VarDec::VarDec(string t, list<string> v) : type(t), vars(v) {}
+VarDec::~VarDec() {}
+
+FunDec::FunDec(string t, string n, list<pair<string,string>> p, list<Stmt*> b)
+    : type(t), name(n), params(p), body(b) {}
+FunDec::~FunDec() {
+    for (auto s : body) delete s;
+}

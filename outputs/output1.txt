@@ -1,3 +1,19 @@
 === STDOUT ===
+Parseo exitoso
+Codigo:
+fun int suma(int a, int b)
+return(a + b)
+endfun
+fun int main()
+var int x;
+x = suma(3, 4)
+print (x)
+endfun
+
+Interprete:
+
 
 === STDERR ===
+parsestmt: current = TOKEN(RETURN, "return")
+parsestmt: current = TOKEN(ID, "x")
+parsestmt: current = TOKEN(PRINT, "print")

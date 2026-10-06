@@ -107,7 +107,7 @@ public:
   list<Stmt *> thenList;
   list<Stmt *> elseList;
   void accept(Visitor *visitor) override;
-  IfStmt(Exp *c);
+  IfStmt(Exp *c, list<Stmt*> thenList, list<Stmt*> elseList);
   ~IfStmt();
 };
 

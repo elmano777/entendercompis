@@ -111,6 +111,9 @@ ostream &operator<<(ostream &outs, const Token &tok) {
   case Token::ENDF:
     outs << "TOKEN(ENF, \"" << tok.text << "\")";
     break;
+  case Token::ENDWHILE:
+    outs << "TOKEN(ENDWHILE, \"" << tok.text << "\")";
+    break;
   case Token::END:
     outs << "TOKEN(END)";
     break;

@@ -20,13 +20,14 @@ public:
     PRINT,
     SEMICOL,
     ASSIGN,
+    ENDWHILE,
     IF,
     THEN,
     ELSE,
     ENDIF,
     VAR,
     FUN,      // fun
-    ENDF,      // endfun, endif, endwhile
+    ENDF,     // endfun, endif, endwhile
     WHILE,    // while
     DO,       // do
     RETURN,   // return
